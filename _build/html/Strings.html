@@ -185,24 +185,8 @@
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#write-a-program-that-takes-two-numbers-as-input-and-prints-the-result-of-their-comparison">
-     Write a program that takes two numbers as input and prints the result of their comparison
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#substring-in-a-string">
-     Substring in a string
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-re-library">
-     Using
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       re
-      </span>
-     </code>
-     library
+    <a class="reference internal nav-link" href="#exercise">
+     Exercise
     </a>
    </li>
   </ul>
@@ -497,13 +481,6 @@ False
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">##Exercise - what would be the output when &quot;is&quot; is used as delimiter for spliting the above sentence. </span>
-</pre></div>
-</div>
-</div>
-</div>
 <p>Python strings have methods <code class="docutils literal notranslate"><span class="pre">upper</span></code> and <code class="docutils literal notranslate"><span class="pre">lower</span></code> to change the case of the string. These methods acts on the string and returns a new string after changing the case.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -559,7 +536,7 @@ APPLE
 </div>
 <div class="section" id="user-input">
 <h1>User input<a class="headerlink" href="#user-input" title="Permalink to this headline">¶</a></h1>
-<p>The input functions are different in 2.x and 3.x with former having <code class="docutils literal notranslate"><span class="pre">raw_input()</span></code> while the later has <code class="docutils literal notranslate"><span class="pre">input()</span></code>.</p>
+<p>The input functions are different in 2.x and 3.x with former having <code class="docutils literal notranslate"><span class="pre">raw_input()</span></code> while the later has <code class="docutils literal notranslate"><span class="pre">input()</span></code>. Be default, the data type for the input is string. In case you need the data type of the input to be integer or float then you need to convert the type using the appropriate function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your name: &quot;</span><span class="p">)</span>
@@ -592,7 +569,6 @@ The name entered is  Manish
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter a number: &quot;</span><span class="p">)</span>
-<span class="c1">#print(number1+1)</span>
 <span class="n">number2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">number2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -605,8 +581,9 @@ The name entered is  Manish
 </div>
 </div>
 </div>
-<div class="section" id="write-a-program-that-takes-two-numbers-as-input-and-prints-the-result-of-their-comparison">
-<h2>Write a program that takes two numbers as input and prints the result of their comparison<a class="headerlink" href="#write-a-program-that-takes-two-numbers-as-input-and-prints-the-result-of-their-comparison" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<p>Write a program that takes two numbers as input and prints the result of their comparison</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter first number: &quot;</span><span class="p">))</span>
@@ -617,79 +594,6 @@ The name entered is  Manish
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First number is greater than the second number&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Both numbers are equal&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="substring-in-a-string">
-<h2>Substring in a string<a class="headerlink" href="#substring-in-a-string" title="Permalink to this headline">¶</a></h2>
-<p>Slicing can be used to get a substring of a string. To get the index of a substring in a string, <code class="docutils literal notranslate"><span class="pre">find()</span></code> can used.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">##find(substr,start,end)</span>
-<span class="n">str1</span> <span class="o">=</span> <span class="s2">&quot;What is your name?&quot;</span>
-<span class="c1">#str1 = &quot;This is a string&quot;</span>
-<span class="n">index1</span> <span class="o">=</span> <span class="n">str1</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;is&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">index1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Get index for all occurence of a substring. Conditionals and loops…</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> 
-<span class="n">str2</span> <span class="o">=</span> <span class="s2">&quot;This is a string&quot;</span>
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">str2</span><span class="p">)):</span>
-    <span class="n">ind1</span> <span class="o">=</span> <span class="n">str2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;is&quot;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">ind1</span><span class="o">==-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">continue</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">ind1</span><span class="p">)</span>
-        <span class="n">i</span> <span class="o">=</span> <span class="n">ind1</span><span class="o">+</span><span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="using-re-library">
-<h2>Using <code class="docutils literal notranslate"><span class="pre">re</span></code> library<a class="headerlink" href="#using-re-library" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="n">str3</span> <span class="o">=</span> <span class="s2">&quot;This is another sring&quot;</span>
-<span class="n">all_indicies</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="s2">&quot;is&quot;</span><span class="p">,</span><span class="n">str3</span><span class="p">)</span>
-<span class="c1">##finditer returns match object</span>
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">all_indicies</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">start</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
-<span class="n">H_all</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">W_all</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">students_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Pooja&quot;</span><span class="p">:(</span><span class="mi">155</span><span class="p">,</span><span class="mi">55</span><span class="p">),</span> <span class="s2">&quot;Preeti&quot;</span><span class="p">:(</span><span class="mi">160</span><span class="p">,</span><span class="mi">60</span><span class="p">),</span> <span class="s2">&quot;Smita&quot;</span><span class="p">:(</span><span class="mi">165</span><span class="p">,</span><span class="mi">65</span><span class="p">)}</span>
-<span class="k">for</span> <span class="n">k1</span><span class="p">,</span><span class="n">v1</span> <span class="ow">in</span> <span class="n">students_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="n">H_all</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">W_all</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v1</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">H_all</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">W_all</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">H_all</span><span class="p">))</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">W_all</span><span class="p">))</span>
-
-<span class="n">sum1</span><span class="o">=</span><span class="mi">0</span>
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">H_all</span><span class="p">:</span>
-    <span class="n">sum1</span> <span class="o">+=</span> <span class="n">x</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sum1</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">H_all</span><span class="p">))</span>
-
-<span class="n">sum2</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">W_all</span><span class="p">:</span>
-    <span class="n">sum2</span> <span class="o">+=</span> <span class="n">y</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sum2</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">W_all</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>

@@ -195,11 +195,9 @@ words2 = s2.split(',')
 print(words2)
 
 
-# In[ ]:
-
-
-##Exercise - what would be the output when "is" is used as delimiter for spliting the above sentence. 
-
+# :::{Quiz}
+# what would be the output when "is" is used as delimiter for spliting the above sentence?
+# ::: 
 
 # Python strings have methods `upper` and `lower` to change the case of the string. These methods acts on the string and returns a new string after changing the case.
 
@@ -244,7 +242,7 @@ print((3>4) and (3>5))
 
 # ## User input
 # 
-# The input functions are different in 2.x and 3.x with former having `raw_input()` while the later has `input()`.
+# The input functions are different in 2.x and 3.x with former having `raw_input()` while the later has `input()`. Be default, the data type for the input is string. In case you need the data type of the input to be integer or float then you need to convert the type using the appropriate function.
 
 # In[19]:
 
@@ -261,16 +259,16 @@ print(a)
 print(type(a))
 
 
-# In[21]:
+# In[2]:
 
 
 number1 = input("Please enter a number: ")
-#print(number1+1)
 number2 = int(number1)
 print(number2+1)
 
 
-# ### Write a program that takes two numbers as input and prints the result of their comparison
+# ### Exercise
+# Write a program that takes two numbers as input and prints the result of their comparison
 
 # In[ ]:
 
@@ -283,79 +281,4 @@ elif(num1>num2):
     print("First number is greater than the second number")
 else:
     print("Both numbers are equal")
-
-
-# ### Substring in a string
-# Slicing can be used to get a substring of a string. To get the index of a substring in a string, `find()` can used. 
-
-# In[ ]:
-
-
-##find(substr,start,end)
-str1 = "What is your name?"
-#str1 = "This is a string"
-index1 = str1.find("is")
-print(index1)
-
-
-# Get index for all occurence of a substring. Conditionals and loops...
-# 
-
-# In[ ]:
-
-
-i = 0 
-str2 = "This is a string"
-for x in range(len(str2)):
-    ind1 = str2.find("is",i)
-    if(ind1==-1):
-        continue
-    else:
-        print(ind1)
-        i = ind1+1
-
-
-# ### Using `re` library
-
-# In[ ]:
-
-
-import re
-str3 = "This is another sring"
-all_indicies = re.finditer("is",str3)
-##finditer returns match object
-for x in all_indicies:
-    print(x.start())
-
-
-# In[ ]:
-
-
-import numpy
-H_all = []
-W_all = []
-students_data = {"Pooja":(155,55), "Preeti":(160,60), "Smita":(165,65)}
-for k1,v1 in students_data.items():
-    H_all.append(v1[0])
-    W_all.append(v1[1])
-print(H_all)
-print(W_all)
-print (numpy.mean(H_all))
-print (numpy.mean(W_all))
-
-sum1=0
-for x in H_all:
-    sum1 += x
-print(sum1/len(H_all))
-
-sum2 = 0
-for y in W_all:
-    sum2 += y
-print(sum2/len(W_all))
-
-
-# In[ ]:
-
-
-
 

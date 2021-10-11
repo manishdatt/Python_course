@@ -176,8 +176,8 @@
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise">
-     Exercise
+    <a class="reference internal nav-link" href="#blast-search-using-sequence-file">
+     BLAST search using sequence file
     </a>
    </li>
   </ul>
@@ -447,12 +447,9 @@ The output file saved in the previous step has all the hits identified in the Bl
 </div>
 </div>
 </div>
-<p>To run the Blast search using a sequence file instead of gi number, we first need to create a seqeunce object and then pass it on to the <code class="docutils literal notranslate"><span class="pre">qblast</span></code> function as shown below.</p>
-<div class="section" id="exercise">
-<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><p>C.elegans protein</p>
-</div></blockquote>
+<div class="section" id="blast-search-using-sequence-file">
+<h2>BLAST search using sequence file<a class="headerlink" href="#blast-search-using-sequence-file" title="Permalink to this headline">¶</a></h2>
+<p>To run the Blast search using a sequence file instead of gi number, we first need to create a seqeunce object and then pass it on to the <code class="docutils literal notranslate"><span class="pre">qblast</span></code> function as shown below. To run this code, save the protein sequence below in a new file example1.fasta.</p>
 <p>MFHPGMTSQPSTSNQMYYDPLYGAEQIVQCNPMDYHQANILCGMQYFNNSHNRYPLLPQMPPQFTNDHPY
 DFPNVPTISTLDEASSFNGFLIPSQPSSYNNNNISCVFTPTPCTSSQASSQPPPTPTVNPTPIPPNAGAV
 LTTAMDSCQQISHVLQCYQQGGEDSDFVRKAIESLVKKLKDKRIELDALITAVTSNGKQPTGCVTIQRSL
@@ -511,14 +508,6 @@ LKNSSQFGSS</p>
         <span class="n">new_row</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csv_out</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
         <span class="n">new_row</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">alignment</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">][:</span><span class="mi">30</span><span class="p">],</span> <span class="n">hsp</span><span class="o">.</span><span class="n">positives</span><span class="p">,</span> <span class="n">hsp</span><span class="o">.</span><span class="n">expect</span><span class="p">])</span>
 <span class="n">csv_out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span><span class="n">HTML</span>
-<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;style&gt;.prompt{width: 0px; min-width: 0px; visibility: collapse}&lt;/style&gt;&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>

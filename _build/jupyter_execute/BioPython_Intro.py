@@ -119,12 +119,9 @@ with open("new_file.txt", "w") as file_handle:
 print("DONE)")
 
 
-# To run the Blast search using a sequence file instead of gi number, we first need to create a seqeunce object and then pass it on to the `qblast` function as shown below. 
+# ### BLAST search using sequence file
+# To run the Blast search using a sequence file instead of gi number, we first need to create a seqeunce object and then pass it on to the `qblast` function as shown below. To run this code, save the protein sequence below in a new file example1.fasta.
 
-# ### Exercise
-
-# >C.elegans protein
-# 
 #    MFHPGMTSQPSTSNQMYYDPLYGAEQIVQCNPMDYHQANILCGMQYFNNSHNRYPLLPQMPPQFTNDHPY
 #    DFPNVPTISTLDEASSFNGFLIPSQPSSYNNNNISCVFTPTPCTSSQASSQPPPTPTVNPTPIPPNAGAV
 #    LTTAMDSCQQISHVLQCYQQGGEDSDFVRKAIESLVKKLKDKRIELDALITAVTSNGKQPTGCVTIQRSL
@@ -184,11 +181,4 @@ for alignment in blast_record.alignments:
         new_row = csv.writer(csv_out, delimiter=" ")
         new_row.writerow([alignment.title.split("|")[-1][:30], hsp.positives, hsp.expect])
 csv_out.close()
-
-
-# In[ ]:
-
-
-from IPython.core.display import display,HTML
-display(HTML('<style>.prompt{width: 0px; min-width: 0px; visibility: collapse}</style>'))
 
