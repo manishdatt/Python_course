@@ -26,8 +26,6 @@ This tutorial would guide you to get started with coding in Python. We'll start 
 
 [Introduction to Biopython](BioPython_Intro.ipynb): Introduction to the sequence object for working with alignments and running BLAST search.
 
-[Working with motifs](Motif_analysis.ipynb): Introduction to sequence motifs and creating sequence logos from multiple sequence alignments.
-
 
 Throughout the tutorial, the python code is shown as a code block with grey background, e.g.
 
