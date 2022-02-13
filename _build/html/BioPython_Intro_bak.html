@@ -53,7 +53,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Strings" href="Strings.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -82,7 +81,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Variables_Operators.html">
    Variables
@@ -93,8 +92,8 @@
    Strings
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="BioPython_Intro.html">
    Introduction to BioPython
   </a>
  </li>
@@ -275,39 +274,7 @@ LIVIKKL-GFGQFGS-----------------------------------------------------------------
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Bio</span> <span class="kn">import</span> <span class="n">AlignIO</span>
 <span class="n">align1</span> <span class="o">=</span> <span class="n">AlignIO</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;kinases.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;fasta&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">align1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Alignment with 5489 rows and 1094 columns
-YELLKVL-GKGAFGE-----------------------------...RPT consensus
-LVYIKEL-GRGNFGS-----------------------------...RLG sp|Q22RR1||agc:agc-sar|Tetrahymena
-LIVIKKL-GFGQFGS-----------------------------...RLG sp|Q234E6||agc:agc-sar|Tetrahymena
-LEVVKKL-GNGQFGS-----------------------------...RTG sp|Q23KG5||agc:agc-sar|Tetrahymena
-LIYIKTL-AFGQFGP-----------------------------...RLG sp|Q23DN8||agc:agc-sar|Tetrahymena
-LIYIKKL-GVGQFGS-----------------------------...RLG sp|I7MFS4||agc:agc-sar|Tetrahymena
-MIYIKKL-GFGQFGS-----------------------------...RLG sp|I7M3B5||agc:agc-sar|Tetrahymena
-MISIKKL-GFGQFGS-----------------------------...RLG sp|I7MD55||agc:agc-sar|Tetrahymena
-LIYIKKL-GEGQFGI-----------------------------...RLG sp|Q869J9|pkg-2|agc:pkg|Paramecium
-FEMIRVL-GKGCAGK-----------------------------...RIR sp|A8N3F0||agc:agc-unique|Coprinopsis
-TERMVVL-KGNLFGF-----------------------------...RLG sp|D6RN25||agc:agc-unique|Coprinopsis
-YSLTRFL-SQGAQGK-----------------------------...RIH sp|A8P464||agc:agc-unique|Coprinopsis
-FDIISSY-NADSDTR-----------------------------...RLN sp|A8N0Q1||agc:agc-unique|Coprinopsis
-FEKKFVL-GKGSYGK-----------------------------...RLQ sp|Q4Q7M5||agc:agc-unique|Leishmania
-FEILKHI-GSGAYGE-----------------------------...RLG sp|Q19858||agc:agc-unique|Caenorhabditis
-FEMMRVL-GKGCAGK-----------------------------...RM- sp|A0A0B7FBE1|cbk1|agc:ndr|Thanatephorus
-FELLKVL-GVGSFGR-----------------------------...RLG sp|P34102|pkgc|agc:agc-unique|Dictyostelium
-FDLLKVL-GVGSFGR-----------------------------...RLG sp|F4PNA6|pkgc|agc:agc-unique|Dictyostelium
-...
-------------NSE-----------------------------...--- sp|W5L2T9|mlkl|tkl:tkl-unique|Astyanax
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub_alignment</span> <span class="o">=</span> <span class="n">align1</span><span class="p">[:</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mi">12</span><span class="p">]</span> <span class="c1">#[row range, column range]</span>
+<span class="n">sub_alignment</span> <span class="o">=</span> <span class="n">align1</span><span class="p">[:</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mi">12</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sub_alignment</span><span class="p">)</span>
 <span class="n">AlignIO</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">sub_alignment</span><span class="p">,</span><span class="s2">&quot;msa1.aln&quot;</span><span class="p">,</span><span class="s2">&quot;clustal&quot;</span><span class="p">)</span>
 </pre></div>
@@ -328,26 +295,6 @@ IRVL-GKGC sp|A8N3F0||agc:agc-unique|Coprinopsis
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %load msa1.aln</span>
-<span class="n">CLUSTAL</span> <span class="n">X</span> <span class="p">(</span><span class="mf">1.81</span><span class="p">)</span> <span class="n">multiple</span> <span class="n">sequence</span> <span class="n">alignment</span>
-
-
-<span class="n">consensus</span>                           <span class="n">LKVL</span><span class="o">-</span><span class="n">GKGA</span>
-<span class="n">sp</span><span class="o">|</span><span class="n">Q22RR1</span><span class="o">||</span><span class="n">agc</span><span class="p">:</span><span class="n">agc</span><span class="o">-</span><span class="n">sar</span><span class="o">|</span><span class="n">Tetrahy</span>      <span class="n">IKEL</span><span class="o">-</span><span class="n">GRGN</span>
-<span class="n">sp</span><span class="o">|</span><span class="n">Q234E6</span><span class="o">||</span><span class="n">agc</span><span class="p">:</span><span class="n">agc</span><span class="o">-</span><span class="n">sar</span><span class="o">|</span><span class="n">Tetrahy</span>      <span class="n">IKKL</span><span class="o">-</span><span class="n">GFGQ</span>
-<span class="n">sp</span><span class="o">|</span><span class="n">Q23KG5</span><span class="o">||</span><span class="n">agc</span><span class="p">:</span><span class="n">agc</span><span class="o">-</span><span class="n">sar</span><span class="o">|</span><span class="n">Tetrahy</span>      <span class="n">VKKL</span><span class="o">-</span><span class="n">GNGQ</span>
-<span class="n">sp</span><span class="o">|</span><span class="n">Q23DN8</span><span class="o">||</span><span class="n">agc</span><span class="p">:</span><span class="n">agc</span><span class="o">-</span><span class="n">sar</span><span class="o">|</span><span class="n">Tetrahy</span>      <span class="n">IKTL</span><span class="o">-</span><span class="n">AFGQ</span>
-<span class="n">sp</span><span class="o">|</span><span class="n">I7MFS4</span><span class="o">||</span><span class="n">agc</span><span class="p">:</span><span class="n">agc</span><span class="o">-</span><span class="n">sar</span><span class="o">|</span><span class="n">Tetrahy</span>      <span class="n">IKKL</span><span class="o">-</span><span class="n">GVGQ</span>
-<span class="n">sp</span><span class="o">|</span><span class="n">I7M3B5</span><span class="o">||</span><span class="n">agc</span><span class="p">:</span><span class="n">agc</span><span class="o">-</span><span class="n">sar</span><span class="o">|</span><span class="n">Tetrahy</span>      <span class="n">IKKL</span><span class="o">-</span><span class="n">GFGQ</span>
-<span class="n">sp</span><span class="o">|</span><span class="n">I7MD55</span><span class="o">||</span><span class="n">agc</span><span class="p">:</span><span class="n">agc</span><span class="o">-</span><span class="n">sar</span><span class="o">|</span><span class="n">Tetrahy</span>      <span class="n">IKKL</span><span class="o">-</span><span class="n">GFGQ</span>
-<span class="n">sp</span><span class="o">|</span><span class="n">Q869J9</span><span class="o">|</span><span class="n">pkg</span><span class="o">-</span><span class="mi">2</span><span class="o">|</span><span class="n">agc</span><span class="p">:</span><span class="n">pkg</span><span class="o">|</span><span class="n">Parame</span>      <span class="n">IKKL</span><span class="o">-</span><span class="n">GEGQ</span>
-<span class="n">sp</span><span class="o">|</span><span class="n">A8N3F0</span><span class="o">||</span><span class="n">agc</span><span class="p">:</span><span class="n">agc</span><span class="o">-</span><span class="n">unique</span><span class="o">|</span><span class="n">Copr</span>      <span class="n">IRVL</span><span class="o">-</span><span class="n">GKGC</span>
 </pre></div>
 </div>
 </div>
@@ -386,23 +333,23 @@ The output file saved in the previous step has all the hits identified in the Bl
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Score 482 (435 bits), expectation 4.3e-117, alignment length 624
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Score 482 (435 bits), expectation 3.6e-117, alignment length 624
 Query:      59 ACAGAAAATGGGGAGAGAAATGAAGTACTTGGCCATGAAAACTGA...GTA 678
                || ||||||||| |||| | |||| ||  |||| |||| | ||||... ||
 Sbjct:     278 ACCGAAAATGGGCAGAGGAGTGAATTATATGGCAATGACACCTGA...TTA 901
-Score 468 (423 bits), expectation 2.7e-113, alignment length 590
+Score 468 (423 bits), expectation 2.3e-113, alignment length 590
 Query:      63 AAAATGGGGAGAGAAATGAAGTACTTGGCCATGAAAACTGATCAA...CCC 649
                |||||||| |||  |||| | || ||||| |||||||| || |||...|||
 Sbjct:      11 AAAATGGGTAGACGAATGGATTATTTGGCGATGAAAACCGAGCAA...CCC 600
-Score 448 (405 bits), expectation 7.2e-108, alignment length 597
+Score 448 (405 bits), expectation 6.0e-108, alignment length 597
 Query:      87 TTGGCCATGAAAACTGATCAATTGGCCGTGGCTAATATGATCGAT...TAG 679
                ||||||||||||||||| ||| ||||  |||||||| |||| |||...|||
 Sbjct:      81 TTGGCCATGAAAACTGAGCAAATGGCGTTGGCTAATTTGATAGAT...TAG 677
-Score 441 (398 bits), expectation 1.1e-105, alignment length 593
+Score 441 (398 bits), expectation 9.0e-106, alignment length 593
 Query:      65 AATGGGGAGAGAAATGAAGTACTTGGCCATGAAAACTGATCAATT...CTG 655
                ||||||||| |||  | |  | |||||||||||||||||||    ... ||
 Sbjct:     254 AATGGGGAG-GAA--GGATAATTTGGCCATGAAAACTGATCC---...ATG 838
-Score 439 (397 bits), expectation 3.7e-105, alignment length 596
+Score 439 (397 bits), expectation 3.1e-105, alignment length 596
 Query:      63 AAAATGGGGAGAGAAATGAAGTACTTGGCCATGAAAACTGATCAA...CTG 655
                |||||||||||    ||| |||  ||||| |||| |||||||| |...|||
 Sbjct:     170 AAAATGGGGAGG---ATGGAGTTTTTGGCTATGAGAACTGATCCA...CTG 756
@@ -454,10 +401,8 @@ LKNSSQFGSS</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seq_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example1.fasta&#39;</span><span class="p">)</span>
 <span class="n">result_handle2</span> <span class="o">=</span> <span class="n">NCBIWWW</span><span class="o">.</span><span class="n">qblast</span><span class="p">(</span><span class="s2">&quot;blastp&quot;</span><span class="p">,</span> <span class="s2">&quot;nr&quot;</span><span class="p">,</span> <span class="n">seq_file</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 <span class="n">seq_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test_blast.xml&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">out_handle</span><span class="p">:</span>
     <span class="n">out_handle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">result_handle2</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-
 <span class="n">blast_output</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test_blast.xml&quot;</span><span class="p">)</span>    
 <span class="n">blast_record</span> <span class="o">=</span> <span class="n">NCBIXML</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">blast_output</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">blast_record</span><span class="o">.</span><span class="n">alignments</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -541,15 +486,6 @@ TSNDACLSIVHSLMCHRQGGESETFAKRAIESLVKKLKEKKDELDSLITA
 
 <div class='prev-next-bottom'>
     
-    <div id="prev">
-        <a class="left-prev" href="Strings.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Strings</p>
-            </div>
-        </a>
-    </div>
 
 </div>
         
